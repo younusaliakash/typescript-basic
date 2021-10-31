@@ -1,44 +1,23 @@
-// Explicite Types & Union Types
+let myfunc: Function;
 
-let myName: string = "Younus Ali Aksh";
-myName = "Younus Ali";
-
-let myNumber: number = 123456789;
-myNumber = 987456123;
-
-let myArrayOne: string[] = ["Akash", "batas", "Nodi"];
-let myArrayTw0: number[] = [1, 2, 3];
-let myArrayThree: boolean[] = [true, false];
-let myArrayfour: (string | number)[] = ["akash", 5];
-
-function mutiply(a: number, b: number) {
-  return a * b;
-}
-
-console.log(mutiply(2, 4));
-
-let myObject: object = {
-  item: "1",
+myfunc = () => {
+  console.log("this is function type");
 };
 
-let myObejctTwo: {
-  name: string;
-  phone: number;
+let myfuncTwo = (a: string, b: string) => {
+  console.log(`Hello ${a} and ${b}`);
 };
 
-myObejctTwo = {
-  name: "Akash",
-  phone: 123456789,
+myfuncTwo("Akash", "Batash");
+
+let myfuncThree = (a: string, b: string, c?: string) => {
+  console.log(`Hello ${a} and ${b}`);
 };
 
-// Dynamic type
+myfuncThree("Akash", "Batash");
 
-let username: any;
+let myfuncFour = (a: string, b: string, c?: string): string => {
+  return a + b;
+};
 
-username = "Dynamic String";
-username = 5;
-username = [];
-username = {};
-username = false;
-
-let dArray: any[] = [1, "Akaash", true, {}, []];
+myfuncFour("This ", "is me");
