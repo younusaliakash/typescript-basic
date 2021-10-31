@@ -1,13 +1,17 @@
-type stringOrrNumber = string | number;
-type userObj = {
-  name: string;
-  id: number;
+let add: (x: number, y: number) => number;
+
+add = (s: number, d: number) => {
+  return s + d;
 };
 
-const userDetails = (id: stringOrrNumber, user: userObj) => {
-  console.log(user);
+let calculate: (x: number, y: number, z: string) => number;
+
+calculate = (a: number, b: number, c: string) => {
+  if (c === "add") {
+    return a + b;
+  } else {
+    return a - b;
+  }
 };
 
-const currentUser = (user: userObj) => {
-  console.log(user);
-};
+calculate(1, 2, "add");
