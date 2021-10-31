@@ -30,3 +30,15 @@ myObejctTwo = {
   name: "Akash",
   phone: 123456789,
 };
+
+// Dynamic type
+
+let username: any;
+
+username = "Dynamic String";
+username = 5;
+username = [];
+username = {};
+username = false;
+
+let dArray: any[] = [1, "Akaash", true, {}, []];
