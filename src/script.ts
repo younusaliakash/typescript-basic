@@ -1,23 +1,13 @@
-let myfunc: Function;
-
-myfunc = () => {
-  console.log("this is function type");
+type stringOrrNumber = string | number;
+type userObj = {
+  name: string;
+  id: number;
 };
 
-let myfuncTwo = (a: string, b: string) => {
-  console.log(`Hello ${a} and ${b}`);
+const userDetails = (id: stringOrrNumber, user: userObj) => {
+  console.log(user);
 };
 
-myfuncTwo("Akash", "Batash");
-
-let myfuncThree = (a: string, b: string, c?: string) => {
-  console.log(`Hello ${a} and ${b}`);
+const currentUser = (user: userObj) => {
+  console.log(user);
 };
-
-myfuncThree("Akash", "Batash");
-
-let myfuncFour = (a: string, b: string, c?: string): string => {
-  return a + b;
-};
-
-myfuncFour("This ", "is me");
