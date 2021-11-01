@@ -1,15 +1,16 @@
-interface SqureOption {
-  height: number;
-  width: number;
-}
-
-const createSqure = (option: SqureOption) => {
-  console.log(
-    `The Squre Height is ${option.height} and width is ${option.width}`
-  );
+const addId = <
+  T extends {
+    name: string;
+    age: number;
+  }
+>(
+  obj: T
+) => {
+  let id = Math.floor(Math.random() * 100);
+  return { ...obj, id };
 };
 
-createSqure({
-  height: 20,
-  width: 20,
+const user = addId({
+  name: "Akash",
+  age: 22,
 });
