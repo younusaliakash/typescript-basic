@@ -1,16 +1,32 @@
-const addId = <
-  T extends {
-    name: string;
-    age: number;
-  }
->(
-  obj: T
-) => {
-  let id = Math.floor(Math.random() * 100);
-  return { ...obj, id };
+interface APIResonse<T> {
+  status: number;
+  type: number;
+  data: T;
+}
+
+const responseOne: APIResonse<object> = {
+  status: 200,
+  type: 1,
+  data: {},
 };
 
-const user = addId({
-  name: "Akash",
-  age: 22,
-});
+// enums
+
+enum Rtype {
+  SUCCES,
+  FAIL,
+}
+
+interface APIResonseTwo<T> {
+  status: number;
+  type: Rtype;
+  data: T;
+}
+
+const responseTwo: APIResonseTwo<object> = {
+  status: 200,
+  type: Rtype.SUCCES,
+  data: {},
+};
+
+console.log(responseTwo);
