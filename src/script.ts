@@ -15,6 +15,8 @@ const responseOne: APIResonse<object> = {
 enum Rtype {
   SUCCES,
   FAIL,
+  FORBIDEN,
+  UNAUTHORIZED,
 }
 
 interface APIResonseTwo<T> {
